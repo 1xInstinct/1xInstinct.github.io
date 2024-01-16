@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    background-color: #19191a;
+    height: 100vh;
+    width: 100vw;
+}
+
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    width: 250px;
+    height: 515px;
+    border-radius: 20px;
+    box-shadow: 0px  0px 10px rgba(0, 0, 0, 0.438);
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
+    transform: translate(-50%, -50%);
+}
+
+section#login div#img{
+    display: block;
+    background: #19191a url(https://i.pinimg.com/736x/5e/b7/3a/5eb73a7a0c9182db1cc444253f83b833.jpg) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 200px;
+}
+
+section#login div#form{
+    display: block;
+    padding: 10px;
+
+}
+
+div#form h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#form p{
+    font-size: 0.8em;
+}
+
+form div.campo{
+    background-color: rgb(40, 133, 255);
+    border: 2px solid rgb(40, 133, 255);;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
+form label{
+    display: none;
+}
+
+div.campo span{
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo input{
+    background-color: rgb(240, 240, 240);
+    font-size: 1em;
+    width: calc(100% - 54px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-12px);
+}
+
+div.campo input:focus-within{
+    background-color: white;
+    border: none;
+}
+
+form input[type=submit]{
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type=submit]:hover{
+    background-color: rgb(231, 231, 231);
+}
+
+form a.botao{
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+form a.botao:hover{
+    text-decoration: underline;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    
+}
+
+form a.botao i{
+    font-size: 0.8em;
+}
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 992px){
+    body{
+        background-image: linear-gradient(to bottom, #19191a, rgb(48, 48, 48));
+    }
+
+    section#login{
+        width: 80vw;
+    }
+
+    section#login div#img{
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+
+    section#login div#form{
+        float: right;
+        width: 70%;
+    }
+    
+    div#form p{
+        font-size: 1em;
+        margin: 20px 0px;
+    }
+}
+
+/* pc */
+@media screen and (min-width: 992px){
+    body{
+        background-image: linear-gradient(to bottom, #19191a, rgb(48, 48, 48));
+    }
+
+    section#login{
+        width: 950px;
+    }
+
+    section#login div#img{
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+
+    section#login div#form{
+        float: left;
+        width: 50%;
+    }
+
+    div#form{
+        font-size: 1em;
+    }
+
+    div#form p{
+        font-size: 1.2em;
+        margin: 20px 0px;
+    }
+}
